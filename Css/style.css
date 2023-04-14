@@ -1,3 +1,37 @@
+/* CUSTOM-PROPS */
+:root{
+    --text-color:#333;
+}
+
+/* FONTS */
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/2") format("woff2"),
+    url("../fonts/") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 html{
     height: 100%;
     box-sizing: border-box;
@@ -16,11 +50,11 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family:"Arial", sans-serif;
+    font-family:"Roboto","Arial", sans-serif;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.75;
     background-color: #fff;
-    color: #222;
+    color: var(--text-color);
 }
 
 img{
@@ -32,12 +66,12 @@ img{
 /* CONTAINER */
 .container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     padding-left: 50px;
     padding-right: 50px;
     margin-left: auto;
     margin-right: auto;
-
+    
 }
 
 
