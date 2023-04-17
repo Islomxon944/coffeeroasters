@@ -123,6 +123,7 @@ only screen and (                min-resolution: 2dppx) {
 .site-header-logo-link {
     display: flex;
     text-decoration: none;
+    flex-shrink: 0;
 }
 .site-header-logo-link:hover{
     opacity: 0.8;
@@ -158,6 +159,7 @@ only screen and (                min-resolution: 2dppx) {
     padding-top: 0;
     color: var(--text-color);
     transition: border-bottom 0.3s ease;
+    white-space: nowrap;
 }
 
 .sitenav-link:hover{
