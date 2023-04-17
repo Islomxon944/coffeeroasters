@@ -1,6 +1,8 @@
 /* CUSTOM-PROPS */
 :root{
     --text-color:#333;
+    --button-bg-color:#0A775F;
+    --outline-color:var(--button-bg-color);
 }
 
 /* FONTS */
@@ -44,6 +46,12 @@ html{
     box-sizing: inherit;
 }
 
+
+*:focus{
+    outline: 2px dashed var(--button-bg-color) ;
+    outline-offset: 3px;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -67,8 +75,8 @@ img{
 .container{
     width: 100%;
     max-width: 1440px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
     
@@ -78,4 +86,85 @@ img{
 /* MAIN-CONTENT */
 .main-content{
     flex-grow: 1;
+}
+
+.site-header-hero-wrapper{
+    background-image: url(../img/sitenav-top-bg-img.jpg);
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+    .site-header-hero-wrapper{
+        background-image: url(../img/sitenav-top-bg-img@2x.jpg);
+    }
+
+}
+
+/* SITE-HEADER */
+
+.site-header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.site-header-logo-link {
+    display: flex;
+    text-decoration: none;
+}
+.site-header-logo-link:hover{
+    opacity: 0.8;
+}
+.site-header-logo-link:active{
+    opacity: 0.6;
+}
+.site-header-logo-img {
+    width: 235px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* SITENAV */
+.sitenav-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.sitenav-item:not(:last-child) {
+    margin-right: 40px;
+
+}
+.sitenav-link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 0;
+    padding-top: 0;
+    color: var(--text-color);
+    transition: border-bottom 0.3s ease;
+}
+
+.sitenav-link:hover{
+    color: var(--button-bg-color);
+    border-bottom: 2px solid #0A775F;  
+}
+
+.sitenav-link:active{
+    opacity: 0.6;
 }
