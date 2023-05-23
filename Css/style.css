@@ -65,6 +65,7 @@ body{
     line-height: 1.75;
     background-color: #fff;
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 img{
@@ -222,7 +223,17 @@ img{
     color: #000;
 }
 
+.hero-two-img-wrapper{
+    position: relative;
+}
+.hero-badge{
+    position: absolute;
+    left:0;
+    top:0;
+    transform: translate(-50%,-50%);
+}
 .hero-img {
+    display: block;
     width: 710px;
     height: 596px;
     object-fit: cover;
@@ -239,6 +250,7 @@ img{
     margin-bottom: 20px;
 }
 .main-collection-inner {
+    position: relative;
     background-color: #E5E5E5;
     background-image: url(../img/main-bg-img.jpg);
     padding: 50px 143px;
@@ -292,6 +304,22 @@ img{
 }
 .main-collection-text:not(:last-child){
     margin-bottom: 10px;
+}
+
+.main-collection-img-left-top{
+    position: absolute;
+    left: -258px;
+    top: 40px;
+}
+.main-collection-img-right-center{
+    position: absolute;
+    top: 685px;
+    right: -328px;
+}
+.main-collection-img-left-bottom{
+    position: absolute;
+    left: -210px;
+    bottom: 170px;
 }
 
 /* .main-collection-item:nth-child(odd) .main-collection-info{
@@ -377,6 +405,7 @@ img{
     margin-right: auto;
 }
 .how-it-works-inner {
+    position: relative;
     padding: 50px 30px;
     background-color: #0A775F;
     background-size: 100% 700px;
@@ -403,6 +432,7 @@ img{
     margin-bottom: 60px;
 }
 .how-it-works-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: calc(100% / 3 -20px );
@@ -411,6 +441,8 @@ img{
 }
 
 .how-it-works-item::before{
+    position: relative;
+    z-index: 2;
     width: 60px;
     height: 60px;
     background-color:#F8F8F2;
@@ -418,6 +450,16 @@ img{
     border: 4px solid #C99B67;
     content: "";
 
+}
+.how-it-works-item:not(:last-child):after{
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    width: 433px;
+    height: 3px;
+    background-image: url(../img/how-it-works-line-img.svg);
+    background-repeat: no-repeat;
+    content: "";
 }
 .how-it-works-info {
     flex-grow: 1;
@@ -433,6 +475,7 @@ img{
     line-height: normal;
     content: "0" counter(how-it-works);
 }
+
 .how-it-works-step-title {
     margin-top: 0;
     margin-bottom: 10px;
@@ -448,6 +491,12 @@ img{
     font-size: 18px;
     line-height: 28px;
 }
+.how-it-works-img{
+    position: absolute;
+    top: 41px;
+    right: 68px;
+}
+
 .button-brown {
     background-color: #C99B67;
     color: #fff;
